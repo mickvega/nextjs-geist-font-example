@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+.invalid-input {
+  @apply border-red-300 focus:border-red-500 focus:ring-red-500;
+  animation: shake 0.3s ease-in-out;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply transform transition-all duration-200 hover:scale-[1.02] hover:shadow-md;
+  }
+
+  .activity-item {
+    @apply transform transition-all duration-200;
+  }
+
+  .activity-item:hover .activity-icon {
+    @apply bg-white text-gray-700;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    @apply transition-opacity duration-200;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    @apply opacity-0;
+  }
+
+  .slide-up-enter-active,
+  .slide-up-leave-active {
+    @apply transition-all duration-200;
+  }
+
+  .slide-up-enter-from,
+  .slide-up-leave-to {
+    @apply transform translate-y-4 opacity-0;
+  }
+
+  .dropdown-enter-active,
+  .dropdown-leave-active {
+    @apply transition-all duration-200;
+  }
+
+  .dropdown-enter-from,
+  .dropdown-leave-to {
+    @apply transform -translate-y-2 opacity-0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+}
