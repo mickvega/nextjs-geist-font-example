@@ -1,0 +1,23 @@
+{
+  "name": "vue-event-scheduler",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Event Scheduler Dashboard",
+  "scripts": {
+    "dev": "vite --port 8000",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-vue-next": "latest",
+    "vue": "latest",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.3",
+    "vite": "latest"
+  }
+}
